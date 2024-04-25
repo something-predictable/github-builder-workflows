@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    environment: ${{ github.event.client_payload.github.environment }}
 
     steps:
       - name: Set Up SSH Agent
